@@ -1,38 +1,46 @@
 {
   "name": "@j4cobi/eslint-plugin-sort-imports",
-  "version": "1.0.1",
-  "description": "A sort-imports rule that properly distinguishes between ES6 import types.",
+  "version": "1.0.2",
+  "description": "An ESLint rule that can auto fix import sorting issues.",
   "keywords": [
     "eslint",
     "eslint-plugin",
     "sort-imports",
     "import-order"
   ],
+  "homepage": "https://github.com/jacobk999/eslint-plugin-sort-imports#readme",
+  "bugs": {
+    "url": "https://github.com/jacobk999/eslint-plugin-sort-imports/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobk999/eslint-plugin-sort-imports.git"
+  },
+  "license": "MIT",
   "author": "marudor",
   "contributors": [
     "Jacob Koshy <jababakoshy@gmail.com> (https://github.com/jacobk999)"
   ],
   "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jacobk999/eslint-plugin-sort-imports.git"
-  },
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "packageManager": "pnpm@9.7.0",
   "exports": {
     "default": "./dist/index.js",
     "import": "./dist/index.js",
     "require": "./dist/index.cjs",
     "types": "./dist/index.d.ts"
   },
+  "main": "dist/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "vitest",
-    "build": "tsup"
+    "build": "tsup",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "^8.1.0"
   },
   "devDependencies": {
     "@typescript-eslint/rule-tester": "^8.1.0",
@@ -40,15 +48,5 @@
     "typescript": "^5.5.4",
     "vitest": "^2.0.5"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jacobk999/eslint-plugin-sort-imports/issues"
-  },
-  "homepage": "https://github.com/jacobk999/eslint-plugin-sort-imports#readme",
-  "directories": {
-    "test": "tests"
-  },
-  "dependencies": {
-    "@typescript-eslint/utils": "^8.1.0"
-  }
+  "packageManager": "pnpm@9.7.0"
 }
