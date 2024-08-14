@@ -35,9 +35,7 @@
     "build": "tsup"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^8.1.0",
     "@typescript-eslint/rule-tester": "^8.1.0",
-    "@typescript-eslint/utils": "^8.1.0",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4",
     "vitest": "^2.0.5"
@@ -51,8 +49,6 @@
     "test": "tests"
   },
   "dependencies": {
-    "eslint": "^9.9.0",
-    "eslint-scope": "^8.0.2",
-    "eslint-visitor-keys": "^3.4.3"
+    "@typescript-eslint/utils": "^8.1.0"
   }
 }
