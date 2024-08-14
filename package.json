@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-sort-imports",
+  "name": "@j4cobi/eslint-plugin-sort-imports",
   "version": "1.0.0",
   "description": "A sort-imports rule that properly distinguishes between ES6 import types.",
   "keywords": [
@@ -10,21 +10,19 @@
   ],
   "author": "marudor",
   "contributors": [
-    {
-      "name": "Jacob Koshy",
-      "email": "jababakoshy@gmail.com",
-      "url": "https://github.com/jacobk999"
-    }
+    "Jacob Koshy <jababakoshy@gmail.com> (https://github.com/jacobk999)"
   ],
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jacobk999/eslint-plugin-sort-imports"
+    "url": "git+https://github.com/jacobk999/eslint-plugin-sort-imports.git"
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "packageManager": "pnpm@9.7.0",
   "exports": {
     "default": "./dist/index.js",
@@ -44,5 +42,17 @@
     "typescript": "^5.5.4",
     "vitest": "^2.0.5"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacobk999/eslint-plugin-sort-imports/issues"
+  },
+  "homepage": "https://github.com/jacobk999/eslint-plugin-sort-imports#readme",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "eslint": "^9.9.0",
+    "eslint-scope": "^8.0.2",
+    "eslint-visitor-keys": "^3.4.3"
+  }
 }
