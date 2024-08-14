@@ -25,6 +25,7 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
+  "packageManager": "pnpm@9.7.0",
   "exports": {
     "default": "./dist/index.js",
     "import": "./dist/index.js",
