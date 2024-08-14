@@ -1,4 +1,6 @@
-# eslint-plugin-sort-imports-es6-autofix
+# eslint-plugin-sort-imports
+
+An updated fork of [eslint-plugin-sort-imports-es6-autofix](https://github.com/marudor/eslint-plugin-sort-imports-es6-autofix).
 
 A sort-imports rule that properly distinguishes between ES6 import types and that is also able to autofix all detected problems.
 
@@ -22,19 +24,24 @@ ESLint's built-in `sort-imports` is only able to sort variable names inside of `
 
 ## Usage
 
-`npm i --save-dev eslint-plugin-sort-imports-es6-autofix`
+`npm i --save-dev eslint-plugin-sort-imports`
 
-```json
-{
-  "plugins": [
-    "sort-imports-es6-autofix"
-  ],
-  "rules": {
-    "sort-imports-es6-autofix/sort-imports-es6": [2, {
-      "ignoreCase": false,
-      "ignoreMemberSort": false,
-      "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
-    }]
+
+```js
+// eslint.config.js
+export default [
+  {
+    plugins: { "sort-imports": sortImports },
+    rules: {
+      "sort-imports/sort-imports": [
+        "error",
+        {
+          ignoreCase: false,
+          ignoreMemberSort: false,
+          memberSyntaxSortOrder: ["all", "single", "multiple", "none"],
+        },
+      ]
+    }
   }
-}
+];
 ```
