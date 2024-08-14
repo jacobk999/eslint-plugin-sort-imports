@@ -1,7 +1,7 @@
 import { rule } from "./sort-imports.js";
 
 const plugin = {
-  name: "eslint-sort-imports",
+  name: "eslint-plugin-sort-imports",
   rules: { "sort-imports": rule },
 };
 
