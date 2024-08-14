@@ -307,8 +307,6 @@ function usedMemberSyntax(node: TSESTree.ImportDeclaration): MemberSyntaxSortOrd
 
 /**
  * Gets the group by member parameter index for given declaration.
- * @param {ASTNode} node - the ImportDeclaration node.
- * @returns {number} the declaration group by member index.
  */
 function getMemberParameterGroupIndex(node: TSESTree.ImportDeclaration, memberSyntaxSortOrder: MemberSyntaxSortOrder[]) {
   return memberSyntaxSortOrder.indexOf(usedMemberSyntax(node));
@@ -316,8 +314,6 @@ function getMemberParameterGroupIndex(node: TSESTree.ImportDeclaration, memberSy
 
 /**
  * Gets the local name of the first imported module.
- * @param {ASTNode} node - the ImportDeclaration node.
- * @returns {?string} the local name of the first imported module.
  */
 function getFirstLocalMemberName(node: TSESTree.ImportDeclaration) {
   return node.specifiers.length ? node.specifiers[0].local.name : node.source.value;
@@ -325,9 +321,6 @@ function getFirstLocalMemberName(node: TSESTree.ImportDeclaration) {
 
 /**
  * Gets if there are lines (empty or comments) between two nodes
- * @param {ASTNode} firstNode - the ImportDeclaration node.
- * @param {ASTNode} secondNode - the ImportDeclaration node.
- * @returns {boolean} if there are lines between the nodes.
  */
 function isLineBetween(firstNode: TSESTree.ImportDeclaration, secondNode: TSESTree.ImportDeclaration) {
   return firstNode.loc.end.line < secondNode.loc.start.line - 1;
